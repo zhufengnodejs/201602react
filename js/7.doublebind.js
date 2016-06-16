@@ -10,6 +10,12 @@ var FormInput = React.createClass({
             val:val
         });
     },
+    shouldComponentUpdate:function(){
+        if(this.state.val.length>6){
+            return false;
+        }
+        return true;
+    },
     render:function(){
         return (
             <div>
